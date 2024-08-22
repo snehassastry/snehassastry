@@ -8,9 +8,8 @@ Skills: R/Python/C++/Power BI
 
 Coursework: Machine Learning, Optimization, Analysis of unstructured data, Data Science
 
+[<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg' alt='linkedin' height='40'>](https://www.linkedin.com/in/https://www.linkedin.com/in/sneha-sastry-rayadurgam//)  
+
 Here are some projects to start with: 
 
 1.Consumer Purchase decision based on demographic and psychographic data using Basic Machine Leaning Models
-
-[<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg' alt='linkedin' height='40'>](https://www.linkedin.com/in/https://www.linkedin.com/in/sneha-sastry-rayadurgam//)  
-
