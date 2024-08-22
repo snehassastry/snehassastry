@@ -5,6 +5,7 @@
 I am a Business Analytics Master's student at the Texas McCombs School of Business. With an experience of about 3 years in category and retail analytics and a passion for data science and machine learning, I am on the constant lookout for new opportunities. Welcome to my profile
 
 Skills: R/Python/C++/Power BI
+
 Coursework: Machine Learning, Optimization, Analysis of unstructured data, Data Science
 
 
