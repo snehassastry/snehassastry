@@ -13,3 +13,7 @@ Coursework: Machine Learning, Optimization, Analysis of unstructured data, Data 
 Here are some projects to start with: 
 
 1.Consumer Purchase decision based on demographic and psychographic data using Basic Machine Leaning Models
+
+2.Associative Rule Mining to understand interesting sets in grocery data 
+
+3.Market Segmentation for a nutrition company 
