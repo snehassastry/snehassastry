@@ -7,7 +7,7 @@ Skills: R/Python/C++/Power BI
 
 Coursework: Machine Learning, Optimization, Analysis of unstructured data, Data Science
 
-[<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg' alt='linkedin' height='40'>](https://www.linkedin.com/in/https://www.linkedin.com/in/sneha-sastry-rayadurgam//)  
+[<img src='https://cdn.iconscout.com/icon/free/png-256/free-linkedin-logo-icon-download-in-svg-png-gif-file-formats--share-work-social-media-color-pack-logos-icons-151141.png?f=webp&w=256' alt='linkedin' height='40'>](https://www.linkedin.com/in/https://www.linkedin.com/in/sneha-sastry-rayadurgam//)  
 
 Here are some projects to start with: 
 
