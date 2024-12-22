@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneha Sastry Rayadurgam</title>
+    <style>
+        html {
+            scroll-padding-top: 1rem; /* Adds padding for scroll behavior */
+        }
+        :root {
+            --burnt-orange: #BF5700;
+            --bronze: #CD7F32;
+            --white: #ffffff;
+            --transparent-white: rgba(255, 255, 255, 0.05);
+            --transparent-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--white);
+            overflow-x: hidden;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: url('image2.jpg') center/cover no-repeat;
+            filter: brightness(0.3);
+            z-index: -1;
+        }
+
+        nav {
+            padding: 1.25rem 3.125rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            padding: 2rem 4rem;
+            gap: 2rem;
+        }
+
+        .hero-content {
+            text-align: left;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1.25rem;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 38rem;
+            line-height: 1.8;
+        }
+
+        .hero-image {
+            width: 600px;
+            height: 700px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+        .skills-highlight {
+            margin-top: 2rem;
+        }
+        .skill-line {
+            margin: 1rem 0;
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 1rem;
+            align-items: center;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+        .skill-category {
+            text-align: right;
+            color: var(--bronze);
+            font-size: 1.1rem;  /* Added font-size for category */
+            font-weight: 400;   /* Added for better visibility */
+            font-weight: 500;
+        }
+        .skill-items {
+            text-align: left;
+            font-size: 1.1rem;
+        }
+        .education-container {
+            max-width: 90rem;
+            margin: 0 auto;
+            padding: 2rem;
+            padding-top: 2rem; 
+        }
+        .degree {
+            margin-bottom: 1.0rem;
+            padding: 1rem;
+            border: 1px solid var(--transparent-border);
+            border-radius: 0.5rem;
+            background: var(--transparent-white);
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s ease;
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 0.5rem;
+            min-height: auto;
+            position: relative;
+        }
+        
+        .college-image {
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            border-radius: 0.5rem;
+        }
+        .college-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .degree-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 0.5rem;
+        }
+        .graduation-year {
+            color: var(--bronze);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+            font-weight: 700; 
+        }
+        .degree:hover {
+            transform: translateY(-5px);
+        }
+
+        .school-name {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--bronze);
+        }
+        .list-items {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .list-items li {
+            margin-bottom: 0.25rem;
+            line-height: 1.3;
+            font-size: 1.0rem;
+            display: inline-block;
+            padding-left: 0;
+        }
+        .subsection {
+            margin-top: 0.5rem;  /* Reduced spacing */
+            padding-left: 0;
+        }
+        .list-items li:not(:last-child)::after {
+            content: "  ";
+            margin: 0 0.5rem;
+            opacity: 0.5;
+        }
+        #career .degree {
+            grid-template-columns: 1fr;  /* Changes from 300px 1fr to single column */
+            padding: 2rem;
+        }
+        .section {
+            padding-top: 3rem; /* Increases top padding of sections */
+        }
+        #career .list-items li {
+            display: block;  /* Change from inline-block to block */
+            margin-bottom: 1rem;
+        }
+        #projects .degree {
+            grid-template-columns: 1fr;  /* Changes from 300px 1fr to single column */
+            padding: 2rem;
+        }
+        #projects .education-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+
+        #projects .degree {
+            margin-bottom: 0;  /* Remove bottom margin as grid gap handles spacing */
+            height: 100%;      /* Ensure consistent height */
+            display: flex;     /* Change to flex for better content distribution */
+            flex-direction: column;
+            cursor: pointer;
+            position: relative;
+            text-decoration: none;
+            color: inherit;
+        }
+        .project-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        #projects .list-items li {
+            display: block;  /* Change from inline-block to block */
+            margin-bottom: 1rem;
+        }
+        #projects .list-items li:not(:last-child)::after {
+            content: none;  /* Remove the bullet separators */
+        }
+        #career .list-items li:not(:last-child)::after {
+            content: none;  /* Remove the bullet separators */
+        }
+        #contact .degree {
+            grid-template-columns: 1fr;  /* Remove the default grid layout */
+            padding: 1.5rem;  /* Reduce padding */
+        }
+
+        .contact-grid {
+            display: grid;
+            gap: 1rem;  /* Reduce gap */
+            margin-top: 1rem;
+            max-width: 600px;  /* Limit width for better readability */
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;  /* Reduce gap between label and value */
+        }
+
+                @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+            .hero-content {
+                text-align: center;
+            }
+            .hero-image {
+                display: none;
+            }
+            .skill-line { 
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .skill-category { text-align: center; }
+            .nav-links { gap: 1rem; }
+            nav { padding: 1rem; }
+            .degree {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+            .college-image {
+                height: 200px;
+                margin-bottom: 1rem;
+            }
+            #projects .education-container {
+                grid-template-columns: 1fr;  /* Single column on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    
+    <nav>
+        <div class="logo">SNEHA SASTRY RAYADURGAM</div>
+        <div class="nav-links">
+            <a href="#">About</a>
+            <a href="#education">Education</a>
+            <a href="#career">Early Career</a>
+            <a href="#projects">Projects</a>
+            <a href="Sneha Sastry Rayadurgam MSBA Resume Book.pdf" download="Sneha_Sastry_Resume.pdf">Resume</a>
+            <a href="#contact">Contact</a>
+        </div>
+        
+    </nav>
+
+    <main class="hero">
+        <div class="hero-content">
+            <h1>Hi! I'm Sneha</h1>
+            <p>I'm a masters student at Texas McCombs School of Business. I'm on my way to untangle humungous amounts of data, to make informed business decisions and drive value. Here's a quick summary of my journey. I'm excited to connect with you!</p>
+            <div class="skills-highlight">
+                <div class="skill-line">
+                    <span class="skill-category">Computer Softwares & Tools:</span>
+                    <span class="skill-items">Excel • Power BI • Databricks • Snowflake • Tableau</span>
+                </div>
+                <div class="skill-line">
+                    <span class="skill-category">Programming Languages:</span>
+                    <span class="skill-items">Python • SQL • R • C++ • MATLAB • Java</span>
+                </div>
+                <div class="skill-line">
+                    <span class="skill-category">Data Science & ML Packages:</span>
+                    <span class="skill-items">Pandas • NumPy • scikit-learn • PyTorch • SciPy</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="me.jpg" alt="Sneha Sastry Rayadurgam">
+        </div>
+    </main>
+    
+    <section id="education" class="section">
+        <div class="education-container">
+            <div class="degree">
+                <div class="college-image">
+                    <img src="mccombs.jpg" alt="McCombs School of Business">
+                </div>
+                <div class="degree-content">
+                    <h3 class="school-name">The University of Texas at Austin - McCombs School of Business</h3>
+                    <div class="graduation-year">Expected Graduation: May 2025</div>
+                    <div class="degree-name">Master of Science, Business Analytics | GPA: 4.00/4.00</div>
+                    <div class="subsection">
+                        <h4 class="subsection-title">Coursework</h4>
+                        <ul class="list-items">
+                            <li>Machine Learning & Data Science</li>
+                            <li>Supply Chain & Marketing Analytics</li>
+                            <li>Information Management</li>
+                            <li>Optimization</li>
+                            <li>Finance</li>
+                        </ul>
+                        <h4 class="subsection-title">Summary</h4>
+                        <ul class="list-items">
+                            <li>Analytics, data, and business form a powerful synergy. While many open-source and commercial tools can handle the coding, my focus during my master's program is on developing a deeper understanding of the why and how. Specifically: When should a particular tool or algorithm be used? How does the choice between alternatives influence outcomes? And most importantly, how does an improvement in model accuracy translate into meaningful business impact?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="degree">
+                <div class="college-image">
+                    <img src="nitw.jpg" alt="NIT Warangal">
+                </div>
+                <div class="degree-content">
+                    <h3 class="school-name">National Institute of Technology Warangal, India</h3>
+                    <div class="graduation-year">Graduated: May 2021</div>
+                    <div class="degree-name">Bachelor of Technology, Electrical and Electronics Engineering | GPA: 9.13/10.00</div>
+                    <div class="subsection">
+                        <h4 class="subsection-title">Awards</h4>
+                        <ul class="list-items">
+                            <li>Prof. N Rama Rao gold medal</li>
+                            <li>Merit scholarship awardee for 4 years (awarded to top 1% students in the department)</li>
+                        </ul>
+                        <h4 class="subsection-title">Summary</h4>
+                        <ul class="list-items">
+                            <li>My four years at NITW provided a solid foundation for both my personal and professional growth. During this time, I delved into challenging subjects such as Digital Signal Processing, Electromagnetic Fields, Control Systems, and Numerical Analysis. Beyond academics, I honed my teamwork, communication, and leadership skills through various initiatives, including serving as General Secretary of the Electrical Engineering Association (2020-21).</li>
+                        </ul>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="career" class="section">
+        <div class="education-container">
+            <div class="degree">
+                <h3 class="school-name">Anheuser Busch InBev (AB InBev) GCC, India - Retail & Category Analyst</h3>
+                <div class="graduation-year">August 2021 - April 2024</div>
+                <div class="subsection">
+                    <ul class="list-items">
+                        <li>Worked closely with the Global Key Accounts team to monitor and analyze the performance of the key accounts channel across 16 top beer markets. Collaborated with cross-regional teams to launch a BI report for 1YP strategy discussions, integrating insights from major retailers on 10 strategic KPIs. This project contributed 6% to the overall $900k target of the GCC commercial tower and remains one of my most cherished achievements.</li>
+                        <li>Led a team of five analysts to develop a granular Sales-Inventory BI tracker for the South African market. Partnered with the ecommerce team there to refine ABI's owned retail website by categorizing over 500 products, analyzing brand campaigns, and proposing new deals to boost website footfall. Additionally, I mentored three interns, two of whom secured full-time positions</li>
+                        <li>As part of the new joiner challenge, collaborated with internal stakeholders to increase gender diversity in tech roles to 40%.</li>
+                    </ul>
+                </div>
+            </div>
+                <div class="degree">
+                <h3 class="school-name">Anheuser Busch InBev (AB InBev) GCC, India - Space Planning Intern (EU)</h3>
+                <div class="graduation-year">May 2020 - June 2020</div>
+                <div class="subsection">
+                    <ul class="list-items">
+                        <li>Developed an automated Power BI tracker to identify a sales uplift of €300k in Netherlands by analyzing the gap in Shelf Share and Market Share. This was my first exposure to the corporate world. The project, which was later scaled to two other countries, was ranked 2nd among 50 others and helped me land a full-time offer from ABI</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="section">
+        <div class="education-container">
+            <a href="https://github.com/snehassastry/FLAME-AI-Challenge-2024-MIS-382N" target="_blank" class="project-link">
+            <div class="degree">
+                <h3 class="school-name">FLAME AI - Forecasting Fireline using Spatio-Temporal Machine Learning models</h3>
+                <div class="graduation-year">December 2024</div>
+                <div class="subsection">
+                    <ul class="list-items">
+                        <li>How cool would it be to able to predict the propagation of fire line for the next few time stamps based on just the past 5 time stamps! This is exactly what my team and I did as a part of our Advanced Machine Learning term project - we tried Optical Flow, XGBoost, Convolutional Neural Nets + LSTM as well as transformers to reach a test MSE of about 0.0010 </li>
+                    </ul>
+                </div>
+            </div>
+        </a>
+        <a href="https://github.com/snehassastry/ETF-Fund-Creation" target="_blank" class="project-link">
+            <div class="degree">
+                <h3 class="school-name">Create a Mutual Fund that tracks the market</h3>
+                <div class="graduation-year">November 2024</div>
+                <div class="subsection">
+                    <ul class="list-items">
+                        <li>ETF funds consist of a huge number and variey of stocks. These funds are well diversified to minimize risk. My team and I created our very mutual fund that tracks the NASDAQ 100 Index with a smaller number of stocks using optimization techniques (linear and integer programming). We also looked at the effects of changing the number of stocks in our subset. So take a look at the project becuase this combines our knowledge from multiple fields</li>
+                    </ul>
+                </div>
+            </div> 
+        </a>
+        <a href="https://github.com/snehassastry/ShampYou" target="_blank" class="project-link"> 
+            <div class="degree">
+                <h3 class="school-name">Shamp-You : Crowd-sourced Recommendation System</h3>
+                <div class="graduation-year">October 2024</div>
+                <div class="subsection">
+                    <ul class="list-items">
+                        <li>Developed a Shampoo recommendation system based on the reviews from Influenster. Just type in three attributes which matter the most to you in your shampoo and get the shampoo which matches closely with those requirements using vader sentiment and simple cosine similarity. Technical jargon aside, it is so much better than just picking the most popular shampoo - pick something that caters to your needs.</li>
+                    </ul>
+                </div>
+            </div>
+        </a>
+        <a href="https://github.com/snehassastry/Purchase-Decision" target="_blank" class="project-link">
+            <div class="degree">
+                <h3 class="school-name">Customer Purchase Decision Prediction using Machine Learning</h3>
+                <div class="graduation-year">June 2024</div>
+                <div class="subsection">
+                    <ul class="list-items">
+                        <li>Marketing teams spend millions on campaigns but what if we are able to get the list of the customers who are most likely to make a purchase. My team and I used Decision trees, Bagging, Random Forests, Gradient Bossting to predict customer purchase decisions with 90% accuracy. We looked at the lift curves to pick the best models and understand how many customers most likely customers are we able to predict</li>
+                    </ul>
+                </div>
+            </div>
+        </a>             
+        </div>
+    </section>
+    <section id="contact" class="section">
+        <div class="education-container">
+            <div class="degree">
+                <h3 class="school-name">Let's Connect!</h3>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value">snehasastry0310@utexas.edu</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-label">Location</div>
+                        <div class="contact-value">Austin, TX</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-label">LinkedIn</div>
+                        <div class="contact-value">
+                            <a href="https://linkedin.com/in/sneha-sastry-rayadurgam" target="_blank">linkedin.com/in/sneha-sastry-rayadurgam</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+    .contact-grid {
+        display: grid;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+    
+    .contact-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .contact-label {
+        color: var(--bronze);
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .contact-value {
+        font-size: 1rem;
+    }
+    
+    .contact-value a {
+        color: var(--white);
+        text-decoration: none;
+        transition: opacity 0.3s;
+    }
+    
+    .contact-value a:hover {
+        opacity: 0.8;
+    }
+    </style>
+            
+</body>
+<script>
+    document.querySelector('a[href="#"]').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+</html>
