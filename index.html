@@ -102,12 +102,9 @@
             line-height: 1.8;
         }
 
-        ..hero-image {
+       .hero-image {
             width: 400px; /* Reduced width */
             height: auto; /* Adjust height dynamically */
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
         
         .hero-image img {
@@ -116,26 +113,31 @@
             border-radius: 10px;
         }
 
+
         .skills-highlight {
             margin-top: 2rem;
         }
         .skill-line {
-            margin: 0.5rem 0; /* Reduced margin */
+            margin: 1rem 0;
             display: flex; /* Changed from grid to flex */
-            gap: 0.5rem; /* Reduced gap */
-            align-items: center;
-            font-size: 1rem; /* Adjusted font size */
+            flex-direction: column; /* Stack items vertically */
+            align-items: flex-start; /* Align items to the left */
+            font-size: 1.1rem;
+            letter-spacing: 1px;
         }
         
         .skill-category {
-            flex-shrink: 0; /* Prevent shrinking of category text */
+            margin-bottom: 0.5rem; /* Adds space below the heading */
             color: var(--bronze);
+            font-size: 1.1rem;
             font-weight: 500;
         }
         
         .skill-items {
-            flex-grow: 1; /* Allow items to take up remaining space */
+            text-align: left;
+            font-size: 1.1rem;
         }
+
 
         .education-container {
             width: 95%;
