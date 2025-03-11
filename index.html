@@ -77,18 +77,18 @@
         }
 
         .hero {
-            height: 100vh;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            height: auto; /* Adjust height dynamically */
+            display: flex; /* Change from grid to flex */
+            flex-direction: row; /* Align content horizontally */
             align-items: center;
+            justify-content: space-between; /* Add space between text and image */
             padding: 2rem 4rem;
             gap: 2rem;
         }
-
         .hero-content {
+            flex: 1; /* Make text take up remaining space */
             text-align: left;
         }
-
         .hero h1 {
             font-size: 4rem;
             margin-bottom: 1.25rem;
@@ -103,17 +103,17 @@
         }
 
        .hero-image {
-            width: 400px; /* Reduced width */
-            height: auto; /* Adjust height dynamically */
+            flex-shrink: 0; /* Prevent shrinking of the image */
+            width: 400px; /* Adjust width */
+            height: auto; /* Maintain aspect ratio */
         }
         
         .hero-image img {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
         }
-
-
         .skills-highlight {
             margin-top: 2rem;
         }
@@ -419,6 +419,25 @@
             margin-bottom: 0.2rem;
         }
     }
+        @media (max-width: 768px) {
+        .hero {
+            flex-direction: column; /* Stack content vertically */
+            align-items: center;
+            padding: 1rem;
+        }
+    
+        .hero-content {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+    
+        .hero-image {
+            width: 300px; /* Reduce image size on smaller screens */
+            height: auto;
+            margin: 0 auto;
+        }
+    }
+
         /* Add these responsive styles to your existing CSS */
 
         /* Base responsive setup */
