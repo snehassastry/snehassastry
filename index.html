@@ -77,14 +77,10 @@
         }
 
         .hero {
-            height: auto; /* Adjust height dynamically */
-            display: flex; /* Change from grid to flex */
-            flex-direction: row; /* Align content horizontally */
+            display: grid;
+            grid-template-columns: 2fr 1fr; /* Allocate more space for text */
             align-items: center;
-            grid-template-columns: 2fr 1fr;
-            justify-content: space-between; /* Add space between text and image */
-            padding: 2rem 4rem;
-            padding-top: 6rem;
+            padding: 6rem 2rem; /* Add space at top, reduce horizontal padding */
             gap: 2rem;
         }
         .hero-content {
@@ -137,8 +133,15 @@
             text-align: left;
             font-size: 1.1rem;
         }
-
-
+        .skill-items a {
+            color: var(--white); /* Set link color to white */
+            text-decoration: none; /* Remove underline */
+            transition: opacity 0.3s; /* Add hover effect */
+        }
+        
+        .skill-items a:hover {
+            opacity: 0.8; /* Slight dimming effect on hover */
+        }
         .education-container {
             width: 95%;
             max-width: 90rem;
