@@ -83,6 +83,7 @@
             align-items: center;
             justify-content: space-between; /* Add space between text and image */
             padding: 2rem 4rem;
+            padding-top: 6rem;
             gap: 2rem;
         }
         .hero-content {
@@ -94,17 +95,15 @@
             margin-bottom: 1.25rem;
             letter-spacing: 2px;
         }
-
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
             max-width: 38rem;
             line-height: 1.8;
         }
-
        .hero-image {
             flex-shrink: 0; /* Prevent shrinking of the image */
-            width: 400px; /* Adjust width */
+            width: 450px; /* Adjust width */
             height: auto; /* Maintain aspect ratio */
         }
         
@@ -403,12 +402,17 @@
                 height: 200px;
             }
         }
-        @media screen and (max-width: 768px) {
-        .hero-image {
-            width: 300px; /* Adjusted for smaller screens */
-            height: 400px; /* Adjusted for smaller screens */
-        }
-        
+       @media screen and (max-width: 768px) {
+        .hero {
+                grid-template-columns: 1fr; /* Stack content vertically */
+                padding-top: 4rem; /* Adjust top padding for smaller screens */
+                text-align: center;
+            }
+            .hero-image {
+                width: 300px; /* Reduce image size further */
+                margin: 0 auto; /* Center image */
+            }
+        }    
         .skill-line {
             grid-template-columns: 1fr;
             text-align: center;
