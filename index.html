@@ -533,113 +533,45 @@
             }
         }
 
-        /* ===== Small, simple Bill Splitter styles (keeps your project-card look) ===== */
-        .bill-grid {
+        /* =========================
+           NEW: Vibe-Coded Projects section (same look/feel as Projects)
+        ========================= */
+        #vibe-projects .degree {
+            grid-template-columns: 1fr;
+            padding: 2rem;
+        }
+
+        #vibe-projects .education-container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            margin-top: 1rem;
+            gap: 1.5rem;
+            padding: 2rem;
         }
 
-        .bill-row {
-            display: grid;
-            gap: 0.35rem;
-        }
-
-        .bill-label {
-            color: var(--bronze);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .bill-input {
-            width: 100%;
-            padding: 0.65rem 0.8rem;
-            border-radius: 0.6rem;
-            border: 1px solid var(--transparent-border);
-            background: rgba(0, 0, 0, 0.25);
-            color: var(--white);
-            outline: none;
-        }
-
-        .bill-input::placeholder {
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        .bill-actions {
+        #vibe-projects .degree {
+            margin-bottom: 0;
+            height: 100%;
             display: flex;
-            gap: 0.75rem;
-            margin-top: 1rem;
-            flex-wrap: wrap;
+            flex-direction: column;
+            cursor: default;
+            position: relative;
+            text-decoration: none;
+            color: inherit;
         }
 
-        .bill-btn {
-            background: var(--burnt-orange);
-            border: none;
-            color: var(--white);
-            padding: 0.65rem 0.9rem;
-            border-radius: 0.6rem;
-            cursor: pointer;
-            font-weight: 600;
-            letter-spacing: 0.3px;
-            transition: opacity 0.25s;
+        #vibe-projects .list-items li {
+            display: block;
+            margin-bottom: 1rem;
         }
 
-        .bill-btn:hover { opacity: 0.9; }
-
-        .bill-btn-ghost {
-            background: transparent;
-            border: 1px solid var(--transparent-border);
+        #vibe-projects .list-items li:not(:last-child)::after {
+            content: none;
         }
 
-        .bill-output {
-            margin-top: 1rem;
-            border: 1px solid var(--transparent-border);
-            border-radius: 0.75rem;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.03);
-            min-height: 3.5rem;
-        }
-
-        .bill-output .summary {
-            display: grid;
-            gap: 0.35rem;
-            margin-bottom: 0.85rem;
-        }
-
-        .bill-output .split-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .bill-output .split-table th,
-        .bill-output .split-table td {
-            padding: 0.55rem 0.25rem;
-            border-top: 1px solid var(--transparent-border);
-            text-align: left;
-            font-size: 0.95rem;
-        }
-
-        .bill-output .split-table th {
-            color: var(--bronze);
-            font-weight: 700;
-        }
-
-        .project-meta {
-            margin-top: 0.75rem;
-            display: grid;
-            gap: 0.35rem;
-            font-size: 1rem;
-        }
-        .project-meta span {
-            color: var(--bronze);
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
-
-        @media screen and (max-width: 992px) {
-            .bill-grid { grid-template-columns: 1fr; }
+        @media (max-width: 768px) {
+            #vibe-projects .education-container {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Contact styles (from your inline block) */
@@ -687,6 +619,7 @@
             <a href="#education">Education</a>
             <a href="#career">Early Career</a>
             <a href="#projects">Projects</a>
+            <a href="#vibe-projects">Vibe Coding</a>
             <a href="Sneha Sastry Rayadurgam MA.pdf" download="Sneha_Sastry_Resume.pdf">Download my Resume</a>
             <a href="#contact">Contact</a>
         </div>
@@ -811,12 +744,11 @@
                     <div class="graduation-year">December 2024</div>
                     <div class="subsection">
                         <ul class="list-items">
-                            <li>How cool would it be to able to predict the propagation of fire line for the next few time stamps based on just the past 5 time stamps! This is exactly what my team and I did as a part of our Advanced Machine Learning term project - we tried Optical Flow, XGBoost, Convolutional Neural Nets + LSTM as well as transformers to reach a test MSE of about 0.0010</li>
+                            <li>How cool would it be to able to predict the propagation of fire line for the next few time stamps based on just the past 5 time stamps! This is exactly what my team and I did as a part of our Advanced Machine Learning term project - we tried Optical Flow, XGBoost, Convolutional Neural Nets + LSTM as well as transformers to reach a test MSE of about 0.0010 </li>
                         </ul>
                     </div>
                 </div>
             </a>
-
             <a href="https://github.com/snehassastry/ETF-Fund-Creation" target="_blank" class="project-link">
                 <div class="degree">
                     <h3 class="school-name">Create a Mutual Fund that tracks the market</h3>
@@ -828,7 +760,6 @@
                     </div>
                 </div> 
             </a>
-
             <a href="https://github.com/snehassastry/ShampYou" target="_blank" class="project-link"> 
                 <div class="degree">
                     <h3 class="school-name">Shamp-You : Crowd-sourced Recommendation System</h3>
@@ -840,7 +771,6 @@
                     </div>
                 </div>
             </a>
-
             <a href="https://github.com/snehassastry/Purchase-Decision" target="_blank" class="project-link">
                 <div class="degree">
                     <h3 class="school-name">Customer Purchase Decision Prediction using Machine Learning</h3>
@@ -851,71 +781,55 @@
                         </ul>
                     </div>
                 </div>
-            </a>
+            </a>             
+        </div>
+    </section>
 
-            <!-- =========================
-                 BILL SPLITTER PROJECT (NEW, SIMPLE LIKE YOUR OTHER PROJECT CARDS)
-            ========================== -->
+    <!-- =========================
+         NEW: VIBE CODING SECTION (4 cards, same grid style, text only)
+    ========================== -->
+    <section id="vibe-projects" class="section">
+        <div class="education-container">
             <div class="degree">
                 <h3 class="school-name">Bill Splitter (MVP)</h3>
                 <div class="graduation-year">Ongoing</div>
                 <div class="subsection">
                     <ul class="list-items">
-                        <li>A tiny tool to split a bill evenly across friends (with tax + tip) in seconds.</li>
+                        <li>A simple, vibe-coded tool to split a bill evenly across friends (with tax + tip) in seconds.</li>
+                        <li><span style="color: var(--bronze); font-weight: 700;">MVP:</span> 3 hours</li>
+                        <li><span style="color: var(--bronze); font-weight: 700;">Status:</span> ongoing</li>
+                        <li><span style="color: var(--bronze); font-weight: 700;">Future improvements:</span> adding login, allow groups and save history, ability to resolve, payment options, quick analytics</li>
                     </ul>
+                </div>
+            </div>
 
-                    <!-- 1-line desc done; now add the metrics exactly as requested -->
-                    <div class="project-meta">
-                        <div><span>MVP:</span> 3 hours</div>
-                        <div><span>Status:</span> ongoing</div>
-                        <div>
-                            <span>Future improvements:</span>
-                            adding login, allow groups and save history, ability to resolve, payment options, quick analytics
-                        </div>
-                    </div>
+            <div class="degree">
+                <h3 class="school-name">Vibe-Coded Project #2</h3>
+                <div class="graduation-year">Work in Progress</div>
+                <div class="subsection">
+                    <ul class="list-items">
+                        <li>Work in progress — coming soon.</li>
+                    </ul>
+                </div>
+            </div>
 
-                    <!-- 3 placeholders + inputs -->
-                    <div class="bill-grid">
-                        <div class="bill-row">
-                            <label class="bill-label" for="bsNames">People (comma-separated)</label>
-                            <input class="bill-input" id="bsNames" type="text" placeholder="Sneha, Twinkle, Sushanth">
-                        </div>
+            <div class="degree">
+                <h3 class="school-name">Vibe-Coded Project #3</h3>
+                <div class="graduation-year">Work in Progress</div>
+                <div class="subsection">
+                    <ul class="list-items">
+                        <li>Work in progress — coming soon.</li>
+                    </ul>
+                </div>
+            </div>
 
-                        <div class="bill-row">
-                            <label class="bill-label" for="bsSubtotal">Subtotal ($)</label>
-                            <input class="bill-input" id="bsSubtotal" type="number" min="0" step="0.01" placeholder="120.00">
-                        </div>
-
-                        <div class="bill-row">
-                            <label class="bill-label" for="bsTax">Tax (%)</label>
-                            <input class="bill-input" id="bsTax" type="number" min="0" step="0.01" placeholder="8.25">
-                        </div>
-
-                        <div class="bill-row">
-                            <label class="bill-label" for="bsTip">Tip (%)</label>
-                            <input class="bill-input" id="bsTip" type="number" min="0" step="0.01" placeholder="18">
-                        </div>
-
-                        <div class="bill-row">
-                            <label class="bill-label" for="bsRounding">Rounding</label>
-                            <select class="bill-input" id="bsRounding">
-                                <option value="2" selected>2 decimals</option>
-                                <option value="0">No decimals</option>
-                            </select>
-                        </div>
-
-                        <div class="bill-row">
-                            <label class="bill-label" for="bsPlaceholder3">Placeholder</label>
-                            <input class="bill-input" id="bsPlaceholder3" type="text" placeholder="(placeholder)">
-                        </div>
-                    </div>
-
-                    <div class="bill-actions">
-                        <button class="bill-btn" id="bsSplitBtn" type="button">Split bill</button>
-                        <button class="bill-btn bill-btn-ghost" id="bsResetBtn" type="button">Reset</button>
-                    </div>
-
-                    <div class="bill-output" id="bsOutput" aria-live="polite"></div>
+            <div class="degree">
+                <h3 class="school-name">Vibe-Coded Project #4</h3>
+                <div class="graduation-year">Work in Progress</div>
+                <div class="subsection">
+                    <ul class="list-items">
+                        <li>Work in progress — coming soon.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -946,16 +860,16 @@
             </div>
         </div>
     </section>
-
+    
    <script>
     // Smooth scroll for "About" link
-    const about = document.querySelector('a[href="#"]');
-    if (about) {
-      about.addEventListener('click', function(e) {
+    document.querySelector('a[href="#"]').addEventListener('click', function(e) {
         e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 
     // Mobile navigation
     const nav = document.querySelector('.nav-links');
@@ -965,7 +879,7 @@
     document.querySelector('nav').appendChild(burger);
 
     burger.addEventListener('click', () => {
-      nav.style.right = nav.style.right === '0px' ? '-100%' : '0px';
+        nav.style.right = nav.style.right === '0px' ? '-100%' : '0px';
     });
 
     // Close menu when clicking a link
@@ -976,98 +890,6 @@
             }
         });
     });
-
-    // =========================
-    // Bill Splitter (simple)
-    // =========================
-    const bsNames = document.getElementById('bsNames');
-    const bsSubtotal = document.getElementById('bsSubtotal');
-    const bsTax = document.getElementById('bsTax');
-    const bsTip = document.getElementById('bsTip');
-    const bsRounding = document.getElementById('bsRounding');
-    const bsSplitBtn = document.getElementById('bsSplitBtn');
-    const bsResetBtn = document.getElementById('bsResetBtn');
-    const bsOutput = document.getElementById('bsOutput');
-
-    function safeNum(v) {
-      const n = parseFloat(v);
-      return Number.isFinite(n) ? n : 0;
-    }
-
-    function parseNames(raw) {
-      const arr = (raw || "")
-        .split(",")
-        .map(s => s.trim())
-        .filter(Boolean);
-      return arr.length ? arr : ["Person 1", "Person 2"];
-    }
-
-    function money(n, decimals) {
-      const x = Number.isFinite(n) ? n : 0;
-      return `$${x.toFixed(decimals)}`;
-    }
-
-    function renderResult({ names, subtotal, taxPct, tipPct, taxAmt, tipAmt, total, perPerson, decimals }) {
-      const summaryHtml = `
-        <div class="summary">
-          <div><strong>Subtotal:</strong> ${money(subtotal, decimals)}</div>
-          <div><strong>Tax (${taxPct.toFixed(2)}%):</strong> ${money(taxAmt, decimals)}</div>
-          <div><strong>Tip (${tipPct.toFixed(2)}%):</strong> ${money(tipAmt, decimals)}</div>
-          <div><strong>Total:</strong> ${money(total, decimals)}</div>
-        </div>
-      `;
-
-      const rows = names
-        .map(n => `<tr><td>${n}</td><td>${money(perPerson, decimals)}</td></tr>`)
-        .join("");
-
-      const tableHtml = `
-        <table class="split-table">
-          <thead>
-            <tr><th>Person</th><th>Owes</th></tr>
-          </thead>
-          <tbody>${rows}</tbody>
-        </table>
-      `;
-
-      bsOutput.innerHTML = summaryHtml + tableHtml;
-    }
-
-    function splitBill() {
-      const names = parseNames(bsNames?.value);
-      const subtotal = safeNum(bsSubtotal?.value);
-      const taxPct = safeNum(bsTax?.value);
-      const tipPct = safeNum(bsTip?.value);
-      const decimals = parseInt(bsRounding?.value || "2", 10);
-
-      if (!bsOutput) return;
-
-      if (subtotal <= 0) {
-        bsOutput.innerHTML = `Enter a subtotal to split the bill.`;
-        return;
-      }
-
-      const taxAmt = subtotal * (taxPct / 100);
-      const tipAmt = subtotal * (tipPct / 100);
-      const total = subtotal + taxAmt + tipAmt;
-      const perPerson = names.length ? total / names.length : total;
-
-      renderResult({ names, subtotal, taxPct, tipPct, taxAmt, tipAmt, total, perPerson, decimals });
-    }
-
-    function resetBill() {
-      if (bsNames) bsNames.value = "";
-      if (bsSubtotal) bsSubtotal.value = "";
-      if (bsTax) bsTax.value = "";
-      if (bsTip) bsTip.value = "";
-      if (bsRounding) bsRounding.value = "2";
-      if (bsOutput) bsOutput.innerHTML = "";
-      const p3 = document.getElementById('bsPlaceholder3');
-      if (p3) p3.value = "";
-    }
-
-    if (bsSplitBtn) bsSplitBtn.addEventListener('click', splitBill);
-    if (bsResetBtn) bsResetBtn.addEventListener('click', resetBill);
-</script>
+   </script>
 </body>
 </html>
